@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Signin = () => {
     return (
-        <div className='flex justify-center items-center'>
-            <div className='absolute flex items-center justify-center top-28 w-full'>
+        <div className='flex justify-center items-center h-full my-20'>
+            <div className='flex items-center justify-center mb-5 w-full '>
                 <div class="w-full max-w-sm p-2 rounded-xl sm:p-6 md:p-8 mt-12 hover:shadow-[-15px_25px_40px_10px_#1A0623] hover:scale-105 transition ease-in-out">
                     <form class="space-y-6 " action="#">
                         <h5 class="text-center text-4xl font-Poppins text-gray-200 ">Sign in </h5>

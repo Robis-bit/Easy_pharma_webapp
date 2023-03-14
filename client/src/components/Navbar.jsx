@@ -1,5 +1,8 @@
 import React from 'react'
 import profile from "../assets/profile.svg"
+import { Collapse } from "flowbite";
+import { Link } from 'react-router-dom';
+import applogo from '../assets/applogo.svg'
 
 
 function Navbar() {
@@ -9,7 +12,7 @@ function Navbar() {
         <nav className="bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 rounded">
             <div className="container flex flex-wrap items-center justify-between mx-auto">
                 <a href="#" className="flex items-center">
-                    <span className="self-center text-xl font-semibold whitespace-nowrap text-white">EasyPharma</span>
+                    <img src={applogo} alt="logo" className='max-w-sm h-8' />
                 </a>
                 <div className="flex items-center md:order-2">
                     <button type="button" className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-slate-100" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
@@ -33,7 +36,7 @@ function Navbar() {
                                 <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100  text-gray-200 hover:text-gray-600">Earnings</a>
                             </li>
                             <li>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100  text-gray-200 hover:text-gray-600">Sign out</a>
+                                <Link to='/Signin' className="block px-4 py-2 text-sm hover:bg-gray-100  text-gray-200 hover:text-gray-600">Sign out</Link>
                             </li>
                         </ul>
                     </div>
@@ -43,9 +46,9 @@ function Navbar() {
                     </button>
                 </div>
                 <div className="justify-between hidden w-full md:flex  md:w-auto md:order-1 z-20" id="mobile-menu-2">
-                    <ul className=" flex flex-col p-4 mt-4 rounded-lg bg-indigo-900 md:bg-transparent md:flex-row md:space-x-16 md:mt-0 md:text-sm md:font-medium md:border-0slate-800bg-slate-800">
+                    <ul className="flex flex-col p-4 mt-4 rounded-lg bg-indigo-900 md:bg-transparent md:flex-row md:space-x-16 md:mt-0 md:text-sm md:font-medium md:border-0slate-800bg-slate-800">
                         <li>
-                            <a href="#" className="block py-2 pl-3 pr-4 text-white bg-purple-600 rounded md:bg-transparent md:text-purple-600 md:p-0 dark:text-white" aria-current="page">Home</a>
+                            <Link to='/' className="block py-2 pl-3 pr-4 text-white bg-purple-600 rounded md:bg-transparent md:text-purple-600 md:p-0 dark:text-white" aria-current="page">Home</Link>
                         </li>
                         <li>
                             <a href="#" className="block py-2 pl-3 pr-4 md:p-0 text-gray-400 md:hover:text-white hover:bg-cyan-800 hover:text-white md:hover:bg-transparent border-gray-700">About</a>
@@ -57,7 +60,7 @@ function Navbar() {
                             <a href="#" className="block py-2 pl-3 pr-4 md:p-0 text-gray-400 md:hover:text-white hover:bg-cyan-800 hover:text-white md:hover:bg-transparent border-gray-700">Pricing</a>
                         </li>
                         <li>
-                            <a href="#" className="block py-2 pl-3 pr-4 md:p-0 text-gray-400 md:hover:text-white hover:bg-cyan-800 hover:text-white md:hover:bg-transparent border-gray-700">Contact</a>
+                            <Link to='/Contact' className="block py-2 pl-3 pr-4 md:p-0 text-gray-400 md:hover:text-white hover:bg-cyan-800 hover:text-white md:hover:bg-transparent border-gray-700">Contact</Link>
                         </li>
                     </ul>
 
